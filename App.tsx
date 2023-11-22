@@ -15,7 +15,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ImageBackground source={{ uri: 'https://picsum.photos/200' }}>
-        <TextCard>ELO ELOOO!!!</TextCard>
+        <TextCard>ELO EELOOO!!!</TextCard>
       </ImageBackground>
       <Image
         source={{ uri: 'https://picsum.photos/200' }}
