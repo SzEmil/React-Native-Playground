@@ -17,6 +17,7 @@ import {
   Platform,
   TouchableWithoutFeedback,
 } from 'react-native';
+import { RegistrationScreen } from './Screens/RegistrationScreen';
 
 export default function App() {
   const [text, setText] = useState('');
@@ -31,25 +32,8 @@ export default function App() {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
-        <ImageBackground source={{ uri: 'https://picsum.photos/200' }}>
-          <TextCard>ELO EELOOO!!!</TextCard>
-        </ImageBackground>
-        <Image
-          source={{ uri: 'https://picsum.photos/200' }}
-          style={{ width: 200, height: 200 }}
-        />
-        <CoursesList />
-        <KeyboardAvoidingView
-          behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
-        >
-          <TextInput
-            style={styles.input}
-            placeholder="Input some text"
-            value={text}
-            onChangeText={setText}
-          />
-          <Button title="Click me" onPress={() => console.log(text)}></Button>
-        </KeyboardAvoidingView>
+        {/* <StatusBar backgroundColor="green" /> */}
+        <RegistrationScreen />
       </View>
     </TouchableWithoutFeedback>
   );
@@ -58,10 +42,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    flexDirection: 'column',
     justifyContent: 'flex-end',
-    paddingBottom: 30,
+    alignItems: 'center',
   },
   input: {
     width: 200,
