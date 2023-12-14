@@ -1,0 +1,1 @@
+export const USER_IMAGE_PLACEHOLDER = 'https://placehold.co/200?text=avatar'

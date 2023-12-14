@@ -10,29 +10,21 @@ import {
 import { useState } from 'react';
 import { Avatar } from '../Avatar/Avatar';
 
-export const RegistrationForm = () => {
-  const [login, setLogin] = useState('');
+export const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
 
   const handleRegister = () => {
-    console.log(login, email, password);
+    console.log(email, password);
   };
-
   return (
     <View style={styles.card}>
-      <Avatar />
-      <Text style={styles.title}>Registration</Text>
+      <Avatar/>
+      <Text style={styles.title}>Sign in</Text>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
-        <TextInput
-          style={styles.input}
-          placeholder="Login"
-          value={login}
-          onChangeText={setLogin}
-        />
         <TextInput
           style={styles.input}
           placeholder="Email"
@@ -86,7 +78,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '400',
     backgroundColor: 'rgba(235, 235, 235, 0.8)',
-    color: '#E8E8E8',
+    color: 'black',
   },
   buttonText: {
     fontSize: 16,

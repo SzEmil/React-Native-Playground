@@ -1,26 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import {
   StyleSheet,
-  Text,
   View,
-  Image,
-  ImageBackground,
   Keyboard,
 } from 'react-native';
-import { TextCard } from './components/TextCard/TextCard';
 import { useFonts } from 'expo-font';
-import { CoursesList } from './components/CoursesList/CoursesList';
-import { Button, TextInput } from 'react-native';
-import { useState } from 'react';
 import {
-  KeyboardAvoidingView,
-  Platform,
   TouchableWithoutFeedback,
 } from 'react-native';
 import { RegistrationScreen } from './Screens/RegistrationScreen';
+import { LoginScreen } from './Screens/LoginScreen';
 
 export default function App() {
-  const [text, setText] = useState('');
 
   const [fontsLoaded] = useFonts({
     'Agbalumo-Regular': require('./assets/Agbalumo-Regular.ttf'),
@@ -33,7 +24,8 @@ export default function App() {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
         {/* <StatusBar backgroundColor="green" /> */}
-        <RegistrationScreen />
+        {/* <RegistrationScreen /> */}
+        <LoginScreen />
       </View>
     </TouchableWithoutFeedback>
   );
