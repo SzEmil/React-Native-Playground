@@ -1,6 +1,5 @@
 import { ImageBackground, StyleSheet } from 'react-native';
 import { RegistrationForm } from '../components/RegistrationForm/RegistrationForm';
-
 export const RegistrationScreen = () => {
   return (
     <ImageBackground
